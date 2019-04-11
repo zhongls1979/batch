@@ -82,7 +82,7 @@ public class BatchJob {
             setLineTokenizer(
                 new DelimitedLineTokenizer() {
                   {
-                    setNames(new String[] {"name", "price"});
+                    setNames(new String[] {"fruitName", "price"});
                   }
                 });
             setFieldSetMapper(
@@ -107,7 +107,7 @@ public class BatchJob {
     JdbcBatchItemWriter<Fruit> writer = new JdbcBatchItemWriter<Fruit>();
     writer.setItemSqlParameterSourceProvider(
         new BeanPropertyItemSqlParameterSourceProvider<Fruit>());
-    writer.setSql("INSERT INTO fruit (name, price) VALUES (:name, :price)");
+    writer.setSql("INSERT INTO fruit (fruit_name, price) VALUES (:fruitName, :price)");
     writer.setDataSource(dataSource);
     return writer;
   }

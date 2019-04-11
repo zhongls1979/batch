@@ -2,23 +2,22 @@ package com.example.demo.batch.domain;
 
 public class Fruit {
 
-  private String name;
+  private String fruitName;
   private int price;
 
   public Fruit() {}
 
-  public Fruit(String name, int price) {
-    this.name = name;
+  public Fruit(String fruitName, int price) {
+    this.fruitName = fruitName;
     this.price = price;
   }
 
-  // getter-setter
-  public String getName() {
-    return name;
+  public String getFruitName() {
+    return fruitName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setFruitName(String fruitName) {
+    this.fruitName = fruitName;
   }
 
   public int getPrice() {
